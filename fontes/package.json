@@ -1,5 +1,5 @@
 {
-  "name": "container_spa",
+  "name": "restaurants_spa",
   "version": "1.0.0",
   "description": "micro-frontend piece restaurants",
   "main": "index.js",

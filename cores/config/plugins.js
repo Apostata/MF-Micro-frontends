@@ -3,10 +3,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {ModuleFederationPlugin} = require('webpack').container
-
-const {NODE_ENV} = process.env
 const dependencies = require("../package.json").dependencies;
-
+const {NODE_ENV} = process.env
 
 const plugins=[
     new CleanWebpackPlugin({
@@ -16,16 +14,17 @@ const plugins=[
         ]
     }),
     new HtmlWebpackPlugin({
-        title:'MF-Container',
+        title:'Colors',
         filename: 'index.html',
-        template:'./src/index.html',
+        template:'src/index.html',
     }),
     new ModuleFederationPlugin({
-        name: "container",
+        name: "Colors",
         filename: "remoteEntry.js",
-        remotes: {
-            Fonts: "Fonts@http://localhost:3001/remoteEntry.js",
-            Colors: "Colors@http://localhost:3002/remoteEntry.js",
+     
+        exposes: {
+            "./routes": "./src/routes/routes",
+            "./reducers":"./src/store/reducers"
         },
         shared: {
             ...dependencies,
@@ -42,7 +41,6 @@ const plugins=[
                 singleton: true,
             },
         }
-        
     })
 ]
 

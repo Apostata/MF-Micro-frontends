@@ -1,11 +1,10 @@
+const path = require('path');
 
 module.exports ={
-    contentBase: __dirname,
+    contentBase: path.join(__dirname, "../dist"),
     index:'index.html',
-    port:3000,
+    port:3001,
     hot:true,
-    overlay: true,
     historyApiFallback:true
-    
     // writeToDisk: true 
 }

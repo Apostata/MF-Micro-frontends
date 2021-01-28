@@ -1,14 +1,13 @@
 const path = require('path')
-const rules = require('./config/rules')
-const plugins = require('./config/plugins')
 const devServer = require('./config/devServer')
-const publicPath = 'http://localhost:3000/'
+const plugins = require('./config/plugins')
+const rules = require('./config/rules')
+const publicPath = 'http://localhost:3002/'
 module.exports = {
   entry: "./src/index",
   mode: "development",
   devServer,
   output: {
-    path: path.resolve(__dirname, '../dist'),
     publicPath
   },
   module: {
@@ -16,4 +15,3 @@ module.exports = {
   },
   plugins
 };
-

@@ -6,24 +6,33 @@ const Header = props =>{
         <nav>
             <ul className="center-column">
                 <li>
-                    <NavLink to="/restaurants">restaurantes</NavLink>
+                    <NavLink to="/">Home</NavLink>
+                </li>
+                <li>
+                    <NavLink to="/setMeasures">Alterar margens</NavLink>
+                </li>
+                <li>
+                    <p>Cores</p>
                     <ul className="center-column">
                         <li>
-                            <NavLink to="/italiano">restaurante Italiano</NavLink>
+                            <NavLink to="/cores/cores">cores</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/japones">restaurante japones</NavLink>
+                            <NavLink to="/cores/listColors">Lista de cores</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/cores/setColor">Mudar cor</NavLink>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <NavLink to="/order">order</NavLink>
+                    <p>Fontes</p>
                     <ul className="center-column">
                         <li>
-                            <NavLink to="/orders/buy">comprar</NavLink>
+                            <NavLink to="/listFonts">Lista de fontes</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/orders/list">lista de compras</NavLink>
+                            <NavLink to="/changeFont">Mudar Fonte</NavLink>
                         </li>
                     </ul>
                 </li>
