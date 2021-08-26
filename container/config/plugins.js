@@ -4,6 +4,13 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const {ModuleFederationPlugin} = require('webpack').container
 
+// const modules = ['Fonts', 'Cores']
+// const remotes = Object.keys(FederatedModules).reduce((acu, mod)=>{
+//     const modulo = mod.replace(/\_/, '')
+//     return {...acu, [modulo]: `${modulo}@${FederatedModules[mod]}/remoteEntry.js`}
+// },{})
+// console.log(remotes)
+
 const {NODE_ENV} = process.env
 const dependencies = require("../package.json").dependencies;
 
@@ -22,7 +29,6 @@ const plugins=[
     }),
     new ModuleFederationPlugin({
         name: "container",
-        filename: "remoteEntry.js",
         remotes: {
             Fonts: "Fonts@http://localhost:3001/remoteEntry.js",
             Colors: "Colors@http://localhost:3002/remoteEntry.js",

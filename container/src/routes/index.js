@@ -1,12 +1,6 @@
 import React, { Suspense } from 'react';
 import { Switch, Route } from 'react-router-dom';
-import localRoutes from './routes';
-
-import FontsRoutes from 'Fonts/routes'
-import ColorsRoutes from 'Colors/routes'
-
-const routes = [...localRoutes, ...FontsRoutes, ...ColorsRoutes]
-// const routes = [...localRoutes]
+import routes from './routes';
 
 const Routes = props =>{
     

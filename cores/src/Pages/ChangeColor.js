@@ -4,7 +4,7 @@ import {useSelector, useDispatch} from 'react-redux'
 
 const ChangeColor = props =>{
     const dispatch = useDispatch()
-    const {color} = useSelector(state=>state);
+    const {} = useSelector(state=>state);
     return(
         <section>
             Seleciona a cor desejada:

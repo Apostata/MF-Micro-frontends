@@ -8,12 +8,15 @@ module.exports = {
   mode: "development",
   devServer,
   output: {
+    filename: 'container.js', // TODO: será isso
+    library: 'container',
     path: path.resolve(__dirname, '../dist'),
-    publicPath
+    publicPath,
   },
   module: {
     rules
   },
-  plugins
+  plugins,
+  devtool: 'source-map'
 };
 

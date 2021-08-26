@@ -1,5 +1,6 @@
 # Microfrontends
 Um exemplo básico de arquiterura de micro frontends utilizando o plugin Module Federation do Webpack 5
+**para tratamento de erro caso não seja carregado algum micro-frontend no container, é necessário ter o webapck 5.15+**
 
 ## Apps
 A poc consiste em 3 aplicações apartadas em React.

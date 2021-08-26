@@ -1,4 +1,3 @@
-
 const path = require("path");
 const plugins = require('./config/plugins')
 const rules = require('./config/rules')
@@ -9,11 +8,17 @@ module.exports = {
   mode: "development",
   devServer,
   output: {
+    filename: 'fontes.js',
+    library: 'fontes',
     path: path.resolve(__dirname, '../dist'),
     publicPath
   },
   module: {
     rules
+  },
+  resolve: {
+    modules: [__dirname, 'node_modules'],
+    extensions: ['.js', '.jsx'],
   },
   plugins
 };
